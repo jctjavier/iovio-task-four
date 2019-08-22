@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "dee1687f-bf72-45dc-875c-fdda5d1b48db",
+		"name": "InfluxDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Write HTTP Endpoint InfluxDB",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "or6-WNN2fwG79f3GRuZUHeV3fu01MYglxnBnqJwWuTG4wIfg1U8YTjmLSTz4eB6zbrsSOWa7ggg9Rho9Nmk8yA==",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"name\" : \"hd_used\",\n    \"columns\" : [\"value\", \"host\", \"mount\"],\n    \"points\" : [\n      [23.2, \"serverA\", \"/mnt\"]\n    ]\n  }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:9999/write?org=iovio&bucket=tech&precision=s&db=mydb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"write"
+					],
+					"query": [
+						{
+							"key": "org",
+							"value": "iovio"
+						},
+						{
+							"key": "bucket",
+							"value": "tech"
+						},
+						{
+							"key": "precision",
+							"value": "s"
+						},
+						{
+							"key": "db",
+							"value": "mydb"
+						}
+					]
+				},
+				"description": "Write to DB"
+			},
+			"response": []
+		}
+	]
+}
