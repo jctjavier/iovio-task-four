@@ -1,15 +1,15 @@
 # iovio-task-four
 ##### status: *complete*
 
-## Description:
+## Description of task:
 * Run and configure demo instance
 * Write a data point into influxdb 
 
 ## Additional Information:
 * Used postman to write data point into the influxdb
 
-## InfluxDB Information:
-* InfluxDB: http://localhost:9999
+## InfluxDB Setup Information:
+* InfluxDB host: http://localhost:9999
 * org: iovio
 * bucket: tech
 * precision: s (seconds)
@@ -21,7 +21,7 @@
 
 ## Steps to write datapoint
 1. Download postman collection
-2. Ensure influx db is running and configured as described in "InfluxDB Information" (Please see above)
+2. Ensure influx db is running and configured as described in *"InfluxDB Setup Information"* _(Please see above)_
 3. Load postman collection into Postman
 4. Input authentication token in header key = 'Authorization'
 5. Input data as a line in request body where data type is 'raw'. Example: 
